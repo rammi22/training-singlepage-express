@@ -2,3 +2,9 @@
 /.vs
 /dev/package-lock.json
 /dev/node_modules
+/.vscode
+/cookies.txt
+/dev/.babelrc
+/dev/.eslintrc.json
+/vscode.code-workspace
+/dev/stuff

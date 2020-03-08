@@ -1,8 +1,17 @@
 export default class shop {
-	constructor () {		
+	constructor () {
+		this.document = document	
+		this.validateAccess()
+	}
+
+	validateAccess () {
+		if (!this.document.querySelector('body#tpl_shop')) {
+			return;
+		}
+
 		console.log(
 			'irre',
-			document.getElementById('testButton')
-		);
+			this.document.getElementById('testButton')
+		)
 	}
 }

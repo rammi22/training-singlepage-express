@@ -86,14 +86,27 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./assets/Shop/index.js":
+/*!******************************!*\
+  !*** ./assets/Shop/index.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return shop; });\nclass shop {\r\n\tconstructor () {\r\n\t\tthis.document = document\t\r\n\t\tthis.validateAccess()\r\n\t}\r\n\r\n\tvalidateAccess () {\r\n\t\tif (!this.document.querySelector('body#tpl_shop')) {\r\n\t\t\treturn;\r\n\t\t}\r\n\r\n\t\tconsole.log(\r\n\t\t\t'irre',\r\n\t\t\tthis.document.getElementById('testButton')\r\n\t\t)\r\n\t}\r\n}\n\n//# sourceURL=webpack:///./assets/Shop/index.js?");
+
+/***/ }),
+
 /***/ "./assets/main.js":
 /*!************************!*\
   !*** ./assets/main.js ***!
   \************************/
 /*! no exports provided */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("throw new Error(\"Module build failed: Error: ENOENT: no such file or directory, open 'G:\\\\PROJECTS\\\\MODULES\\\\training-singelpage-express\\\\dev\\\\assets\\\\main.js'\");\n\n//# sourceURL=webpack:///./assets/main.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Shop_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Shop/index */ \"./assets/Shop/index.js\");\n// https://stackoverflow.com/questions/35545093/webpack-watch-and-launching-nodemon\r\n\r\n\r\n\r\nnew _Shop_index__WEBPACK_IMPORTED_MODULE_0__[\"default\"]()\n\n//# sourceURL=webpack:///./assets/main.js?");
 
 /***/ })
 

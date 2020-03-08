@@ -4,6 +4,7 @@
 import ShopController from './../app/Controllers/ShopController.js'
 import express from 'express'
 const router = express.Router()
+import logger from './../custom_modules/logger.js'
 
 
 // Home Page
@@ -13,7 +14,7 @@ router.get('/', (req, res) => {
 
 // Shop
 router.get('/shop', (req, res) => {
-	const controller = new ShopController(req, res);
+	const controller = new ShopController(req, res, logger);
 	return controller.renderShop();
 })
 

@@ -30,3 +30,15 @@ code {
 	padding: 3px 5px;
 	background-color: #ececec;
 }
+
+div.message {
+	display: inline-block;
+	margin-left: 20px;
+	&.confirm,
+	&.success {
+		color: green;
+	}
+	&.alert {
+		color: red;
+	} 
+}

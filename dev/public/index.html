@@ -25,7 +25,7 @@
 			<main>
 				<h1>Codebeispiel<span>::</span>SinglePageApplikation (SPA)</h1>
 				<p>
-					Dieses Projekt dient als <em>Codebeispiel</em> für eine <strong>SPA (SinglePageApplikation)</strong> 
+					Dieses Projekt dient als <em>Codebeispiel</em> für eine <strong>SPA (SinglePageApplikation)</strong>
 				</p>
 				<section>
 					<h2>Diese Applikation</h2>
@@ -34,13 +34,12 @@
 						übermittelt. Dieser sendet eine Antwort und diese löst einen Alert aus mit einer Nachricht. 
 					</p>
 					<form name="testform">
-						<label>Geben Sie Ihren Namen ein</label> <input type="text" required> <button>Senden</button>
+						<label>Geben Sie Ihren Namen ein</label> <input type="text" name="uname" required> <button>Senden</button>
+						<div class="message confirm"></div> 
+						<input type="hidden" name="form_name" value="testform">
 					</form>
-					<p>
-						Beim Klick auf<a href="/shop" class="client-render" data-destination="shop">Shop</a> wird <b>kein Request an den Server ausgelöst</b>,
-						sondern die Seite wird vom JavaScript auf der ClientSeite <code>/public/js/app.js</code> erstellt.<br>
-					</p>
 				</section>
+				<hr>
 				<section>
 					<h2>Möglicher UseCase für eine SPA</h2>
 					<p>

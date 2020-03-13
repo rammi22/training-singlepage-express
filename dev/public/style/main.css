@@ -28,3 +28,14 @@ code {
   padding: 3px 5px;
   background-color: #ececec;
 }
+div.message {
+  display: inline-block;
+  margin-left: 20px;
+}
+div.message.confirm,
+div.message.success {
+  color: green;
+}
+div.message.alert {
+  color: red;
+}

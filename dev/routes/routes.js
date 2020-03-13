@@ -1,27 +1,49 @@
-// https://scotch.io/tutorials/keeping-api-routing-clean-using-express-routers
-// https://stackoverflow.com/questions/38681318/express-4-middleware-when-route-is-not-found-finalhandler-not-called-how-to-c
-
-// import ShopController from './../app/Controllers/ShopController.js'
+import FormController from './../app/Controllers/FormController.js'
+import bodyParser from 'body-parser';
 import express from 'express'
+
 const router = express.Router()
-// import logger from './../custom_modules/logger.js'
+router.use(bodyParser.urlencoded({ extended: true }))
 
+// post request form
+router.post('/send-test', (req, res) => {
+	try {
+		// initialize new from controller
+		const formController = new FormController(req.body)
+		// validate form
+		formController.validateForm()
+		// set response message
+		let customMessage = 'Hallo ' + formController.getValidName() + ', Grüsse vom Server'
 
-// Home Page
-// router.get('/', (req, res) => {
-// 	res.send('<h1>Hello World</h1>')
-// });
+		// execute the response
+		res
+			.set('content-type', 'application/json')
+			.json({
+				type:'success', 
+				message:customMessage
+			})
+			.end()
+	} catch (error) {
+		res
+			.status(400)
+			.json({
+				type:'error',
+				message:error.message
+			})
+			.end()
+	}
+})
 
-// Shop
-// router.get('/shop', (req, res) => {
-// 	const controller = new ShopController(req, res, logger);
-// 	return controller.renderShop();
-// })
-
-// 404 not found
+// 400 bad request
 router.use(function (req, res) {
 	if (!req.route) {
-		res.status(404).send('<h1>Errorrrrr!</h1>')
+		res
+			.status(400)
+			.json({
+				type:'error',
+				message:'Ungültige Anforderung:' + req.originalUrl
+			})
+			.end()
 	}
 })
 

@@ -14,24 +14,21 @@
 	<body id="tpl_home">
 		<div id="content">
 			<header>
-				<nav id="main_nav">
-					<ul>
-						<li>
-							<a href="/shop" class="client-render" data-destination="shop">Zum Shop</a>
-						</li>
-					</ul>
-				</nav>
-			</header>
-			<main>
 				<h1>Codebeispiel<span>::</span>SinglePageApplikation (SPA)</h1>
 				<p>
-					Dieses Projekt dient als <em>Codebeispiel</em> für eine <strong>SPA (SinglePageApplikation)</strong>
+					Dieses Projekt dient als <em>einfacher Codebeispiel</em> für eine <strong>SPA (SinglePageApplikation)</strong>
 				</p>
+			</header>
+			<main>
 				<section>
 					<h2>Diese Applikation</h2>
 					<p>
-						Mit der Eingabe Ihres Namens in untere Formular und dem Klick auf Senden wird Ihre Eingabe an den Server
-						übermittelt. Dieser sendet eine Antwort und diese löst einen Alert aus mit einer Nachricht. 
+						Der Server nimmt einen <b>Post-Request</b> entgegen, validiert diesen und sendet eine entsprechende Antwort.
+					</p>
+					<p>
+						Mit der Eingabe Ihres Namens in untere Formular und dem Klick auf Senden wird Ihre Eingabe zunächst lokal (Client) 
+						validiert und bei erfolgreicher Validierung an den Server gesendet übermittelt.<br>
+						Die vom Server gesendete Antwort im JSON-Format wird wiederum clientseitig aufgearbeitet und ausgegeben. 
 					</p>
 					<form name="testform">
 						<label>Geben Sie Ihren Namen ein</label> <input type="text" name="uname" required> <button>Senden</button>
@@ -40,16 +37,6 @@
 					</form>
 				</section>
 				<hr>
-				<section>
-					<h2>Möglicher UseCase für eine SPA</h2>
-					<p>
-						Für einen Warenkorb (eine Unterseite) werden sämtliche Logiken, wie z.Bsp. Produktauswahl, Berechnungen oder vom 
-						Server gelieferte Produktlisten filtern, werden via JavaScript Clientseitig abgearbeitet und zu persistierende 
-						Daten im JSON-Format mit mit einem POST-Request an den Server geschickt.<br><br>
-						Ein Vorteil unter vielen: Dieses Vorgehen entlasten den Server und die Kommunikation über das Internet und der Benutzer 
-						auf der Client-Seite hat besseres Feeling beim Benutzen der App.
-					</p>
-				</section>
 				<section>
 					<h2>Eingesetzte Werkzeuge und Techniken</h2>
 					<p>
@@ -82,6 +69,17 @@
 					<p>
 						Die <b>Versionsverwaltung</b> wird mit <a href="https://git-scm.com/doc" target="_blank">GIT (V 2.18.0.windows.1)</a> und
 						<a href="https://tortoisegit.org/" target="_blank">TortoiseGit (V 2.9.0.0)</a> realisiert.
+					</p>
+				</section>
+				<hr>
+				<section>
+					<h2>Möglicher UseCase für eine SPA</h2>
+					<p>
+						Für einen Warenkorb (eine Unterseite) werden sämtliche Logiken, wie z.Bsp. Produktauswahl, Berechnungen oder vom 
+						Server gelieferte Produktlisten filtern, werden via JavaScript Clientseitig abgearbeitet und zu persistierende 
+						Daten im JSON-Format mit mit einem POST-Request an den Server geschickt.<br><br>
+						Ein Vorteil unter vielen: Dieses Vorgehen entlasten den Server und die Kommunikation über das Internet und der Benutzer 
+						auf der Client-Seite hat besseres Feeling beim Benutzen der App.
 					</p>
 				</section>
 			</main>

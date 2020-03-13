@@ -1,10 +1,9 @@
-import {AbstractController} from './AbstractController.js'
 import router from './../../routes/routes.js'
 
-export default class AppController extends AbstractController {
+export default class AppController {
 
 	constructor (app) {
-		super()
+		// super()
 		this.app = app
 	}
 

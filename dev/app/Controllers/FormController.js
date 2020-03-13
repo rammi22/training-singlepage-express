@@ -8,6 +8,7 @@ class FormController {
 		if (this.validFormNames.indexOf(this.form.form_name) === -1) {
 			throw new Error('Gesendetes Formular ist nicht gültig!')
 		}
+		return null;
 	}
 
 	getValidName () {

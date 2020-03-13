@@ -11,6 +11,7 @@ router.post('/send-test', (req, res) => {
 		// initialize new from controller
 		const formController = new FormController(req.body)
 		// validate form
+		console.log(formController.validateForm())
 		formController.validateForm()
 		// set response message
 		let customMessage = 'Hallo ' + formController.getValidName() + ', Grüsse vom Server'

@@ -50,7 +50,6 @@ class FormController {
 			body: formData,
 		}).then((response) => response.json())
 			.then((data) => {
-				console.log(data)
 				if (data.type === 'error') {
 					this.displayMessage('error', data.message)
 				}

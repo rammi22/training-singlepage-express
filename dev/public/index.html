@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Home</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/style/main.css">
+	</head>
+	<body id="tpl_home">
+		<div id="content">
+			<header>
+				<nav id="main_nav">
+					<ul>
+						<li>
+							<a href="/shop" class="client-render" data-destination="shop">Zum Shop</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<main>
+				<h1>Codebeispiel<span>::</span>SinglePageApplikation (SPA)</h1>
+				<p>
+					Dieses Projekt dient als <em>Codebeispiel</em> für eine <strong>SPA (SinglePageApplikation)</strong> 
+				</p>
+				<section>
+					<h2>Diese Applikation</h2>
+					<p>
+						Mit der Eingabe Ihres Namens in untere Formular und dem Klick auf Senden wird Ihre Eingabe an den Server
+						übermittelt. Dieser sendet eine Antwort und diese löst einen Alert aus mit einer Nachricht. 
+					</p>
+					<form name="testform">
+						<label>Geben Sie Ihren Namen ein</label> <input type="text" required> <button>Senden</button>
+					</form>
+					<p>
+						Beim Klick auf<a href="/shop" class="client-render" data-destination="shop">Shop</a> wird <b>kein Request an den Server ausgelöst</b>,
+						sondern die Seite wird vom JavaScript auf der ClientSeite <code>/public/js/app.js</code> erstellt.<br>
+					</p>
+				</section>
+				<section>
+					<h2>Möglicher UseCase für eine SPA</h2>
+					<p>
+						Für einen Warenkorb (eine Unterseite) werden sämtliche Logiken, wie z.Bsp. Produktauswahl, Berechnungen oder vom 
+						Server gelieferte Produktlisten filtern, werden via JavaScript Clientseitig abgearbeitet und zu persistierende 
+						Daten im JSON-Format mit mit einem POST-Request an den Server geschickt.<br><br>
+						Ein Vorteil unter vielen: Dieses Vorgehen entlasten den Server und die Kommunikation über das Internet und der Benutzer 
+						auf der Client-Seite hat besseres Feeling beim Benutzen der App.
+					</p>
+				</section>
+				<section>
+					<h2>Eingesetzte Werkzeuge und Techniken</h2>
+					<p>
+						Grundsätzlich läuft die Applikation Serverseitig mit <a href="https://nodejs.org/en/" target="_blank">
+						Node.js (V 12.15.0 LTS)</a>.
+					</p>	
+					<h3>Frameworks und Compiler</h3>					
+					<p>Die Umsetzung erfolgt mit folgenden Frameworks:
+						<ul>
+							<li>
+								<b>Node.js</b><a href="https://expressjs.com/" target="_blank">Express.js (V 4.17.1)</a>
+							</li>
+							<li>
+								<b>CSS Styling</b> <a href="http://lesscss.org/">LESS (lesscss V 3.11.1)</a>
+							</li>
+						</ul>
+					</p>			
+					<p>
+						Um serveseitige Javascript-Dateien <code>assets/js/*</code> auf der Client-Seite <code>public/js/*/</code> zu 
+						Verfügung zu stellen, wird der <b>Compiler</b><a href="https://webpack.js.org/" target="_blank">Webpack (V 4.42.0)</a> 
+						verwendet.
+					</p>
+					<h3>Entwicklerwerkzeuge</h3>
+					<p>
+						Als <b>IDE</b> setze ich<a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> ein.
+					</p>
+					<p>
+						Für die <b>Codeanalyse</b> des Quellcodes benutze ich<a href="https://eslint.org/">ESLint (V 6.8.0)</a>.
+					</p>
+					<p>
+						Die <b>Versionsverwaltung</b> wird mit <a href="https://git-scm.com/doc" target="_blank">GIT (V 2.18.0.windows.1)</a> und
+						<a href="https://tortoisegit.org/" target="_blank">TortoiseGit (V 2.9.0.0)</a> realisiert.
+					</p>
+				</section>
+			</main>
+		</div>
+		<script src="/js/app.js"></script> 
+	</body>
+</html>

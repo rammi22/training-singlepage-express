@@ -5,7 +5,7 @@ export default class TemplateIndex {
 		this.setHtml();
 	}
 
-	setHtml() {
+	setHtml () {
 		this.html = html
 	}
 

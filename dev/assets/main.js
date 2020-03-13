@@ -1,5 +1,25 @@
-// https://stackoverflow.com/questions/35545093/webpack-watch-and-launching-nodemon
+import MainNavigation from './js/Entities/MainNavigation.js'
 
-import shop from './Shop/index'
+class App {
+	static initialize () {
+		// handle browser history
+		const serializer = new XMLSerializer();
+		this.popstateHTML = serializer.serializeToString(document);
+		window.addEventListener('popstate', () => {
+			console.log(this.popstateHTML);
+			Reflect.apply(App.setPopstateContent, this, [])
+			console.log(this.popstateHTML);
+		});
+		// navigate inside client application
+		this.mainNavigation = new MainNavigation();
+		this.mainNavigation.initialize()
+		return
+	}
 
-new shop()
+	static setPopstateContent () {
+		this.popstateHTML = this.mainNavigation.getCurrentHtml()
+	}
+
+}
+
+App.initialize()
